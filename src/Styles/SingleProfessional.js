@@ -8,13 +8,13 @@ line-height: 25px;
 background-color: #A66AA1;
 width: 90%;
 border-radius: 3px;
-padding: 15px 0px 15px 15px;
+padding: 15px 15px 15px 15px;
 margin: auto;
 margin-bottom: 40px;
 
 @media (min-width: 1024px){
     width: 55%;
-    padding: 25px 0px 25px 25px;
+    padding: 25px 25px 25px 25px;
     font-size: 1.1rem;
     line-height: 30px;
 }`
