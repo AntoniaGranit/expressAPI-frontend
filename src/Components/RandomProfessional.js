@@ -34,11 +34,11 @@ export const RandomProfessional = () => {
         <SingleProfessional>
           <UserIcon><User width={50} height={50} /></UserIcon>
           <p>
-        This randomized IT professional is a {randomProfessional.age}-year-old {randomProfessional.gender} {randomProfessional.position} based in {randomProfessional.city}.
-      She&apos;s a {randomProfessional.seniority_level}-level with {randomProfessional.total_years_experience} years of experience,
+        This randomized IT professional is a {randomProfessional.age}-year-old {randomProfessional.gender.toLowerCase()} {randomProfessional.position} based in {randomProfessional.city}.
+      She&apos;s a {randomProfessional.seniority_level.toLowerCase()}-level {randomProfessional.employment_status.toLowerCase()} with {randomProfessional.total_years_experience} years of experience,
       and a yearly salary of {randomProfessional.yearly_salary} euros.
       Her main programming language is {randomProfessional.main_language}, and her work language is {randomProfessional.work_language}.
-      She works at a {randomProfessional.company_type} company of about {randomProfessional.company_size} employees, and she&apos;s a {randomProfessional.employment_status}.
+      She works at a {randomProfessional.company_type.toLowerCase()} company of about {randomProfessional.company_size} employees.
           </p>
         </SingleProfessional>
         {/* <Button type="button" onClick={refreshPage}>randomize again!</Button> */}
@@ -50,11 +50,11 @@ export const RandomProfessional = () => {
         <SingleProfessional>
           <UserIcon><User width={50} height={50} /></UserIcon>
           <p>
-        This randomized professional is a {randomProfessional.age}-year-old {randomProfessional.gender} {randomProfessional.position} based in {randomProfessional.city}.
-      He&apos;s a {randomProfessional.seniority_level}-level with {randomProfessional.total_years_experience} years of experience,
+        This randomized professional is a {randomProfessional.age}-year-old {randomProfessional.gender.toLowerCase()} {randomProfessional.position} based in {randomProfessional.city}.
+      He&apos;s a {randomProfessional.seniority_level.toLowerCase()}-level {randomProfessional.employment_status.toLowerCase()} with {randomProfessional.total_years_experience} years of experience,
       and a yearly salary of {randomProfessional.yearly_salary} euros.
       His main programming language is {randomProfessional.main_language}, and his work language is {randomProfessional.work_language}.
-      He work at a {randomProfessional.company_type} company of about {randomProfessional.company_size} employees, and he&apos;s a {randomProfessional.employment_status}.
+      He works at a {randomProfessional.company_type.toLowerCase()} company of about {randomProfessional.company_size} employees.
           </p>
         </SingleProfessional>
         {/* <Button type="button" onClick={refreshPage}>get new professional</Button> */}
