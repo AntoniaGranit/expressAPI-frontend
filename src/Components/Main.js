@@ -53,8 +53,7 @@ export const Main = () => {
       <Link to={`/${selectedGender}`}>
         <Button type="button" disabled={!selectedGender}>sort by gender</Button>
       </Link>
-      <NavigationLink to="/MaleList">by gender</NavigationLink>
-      <NavigationLink to="/FemaleList">by language</NavigationLink>
+      <NavigationLink to="/RandomProfessional">random professional</NavigationLink>
       <NavigationLink to="/CompleteList">everyone</NavigationLink>
     </>
   )

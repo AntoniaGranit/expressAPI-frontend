@@ -4,6 +4,7 @@ import { WorkLanguage } from 'Components/WorkLanguage';
 import { Navbar } from 'Components/Navbar';
 import { CompleteList } from 'Components/CompleteList';
 import { GenderList } from 'Components/GenderList';
+import { RandomProfessional } from 'Components/RandomProfessional';
 import { Main } from 'Components/Main';
 import styled from 'styled-components';
 
@@ -24,6 +25,7 @@ export const App = () => {
           <Route path="/professionals/:worklanguage" element={<WorkLanguage />} />
           <Route path="/completelist" element={<CompleteList />} />
           <Route path="/:gender" element={<GenderList />} />
+          <Route path="/randomprofessional" element={<RandomProfessional />} />
         </Routes>
       </MainSection>
     </BrowserRouter>
