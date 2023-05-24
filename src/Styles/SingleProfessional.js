@@ -29,3 +29,7 @@ font-size: 1em;
     font-size: 1em;
     line-height: 30px;
 }`
+
+export const UserIcon = styled.i`
+display: flex;
+justify-content: center;`

@@ -36,6 +36,8 @@ display: flex;
 justify-content: flex-start;
 border: none;
 margin-top: 40px;
+align-items: center;
+
 &:hover {
     opacity: 0.3;
 }

@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
+import { User } from 'iconoir-react';
 import { Loading } from './Loading';
-import { SingleProfessional } from '../Styles/SingleProfessional';
+import { SingleProfessional, UserIcon } from '../Styles/SingleProfessional';
 // import { Button } from '../Styles/NavBarStyles'
 
 export const RandomProfessional = () => {
@@ -31,6 +32,7 @@ export const RandomProfessional = () => {
     return (
       <section>
         <SingleProfessional>
+          <UserIcon><User width={50} height={50} /></UserIcon>
           <p>
         This randomized professional is a {randomProfessional.age}-year-old {randomProfessional.gender} {randomProfessional.position} based in {randomProfessional.city}.
       She&apos;s a {randomProfessional.seniority_level}-level with {randomProfessional.total_years_experience} years of experience,
@@ -46,6 +48,7 @@ export const RandomProfessional = () => {
     return (
       <section>
         <SingleProfessional>
+          <UserIcon><User width={50} height={50} /></UserIcon>
           <p>
         This randomized professional is a {randomProfessional.age}-year-old {randomProfessional.gender} {randomProfessional.position} based in {randomProfessional.city}.
       He&apos;s a {randomProfessional.seniority_level}-level with {randomProfessional.total_years_experience} years of experience,
