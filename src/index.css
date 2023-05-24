@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: "Questrial";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1C0825;
+}
+
+code {
+  font-family: "Questrial";
+}
