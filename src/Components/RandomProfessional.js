@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loading } from './Loading';
 import { SingleProfessional } from '../Styles/SingleProfessional';
-import { Button } from '../Styles/NavBarStyles'
+// import { Button } from '../Styles/NavBarStyles'
 
 export const RandomProfessional = () => {
   const [randomProfessional, setrandomProfessional] = useState({})
