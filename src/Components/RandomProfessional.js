@@ -17,9 +17,9 @@ export const RandomProfessional = () => {
       .finally(() => setLoading(false))
   }, []);
 
-  const refreshPage = () => {
-    window.location.reload();
-  };
+  // const refreshPage = () => {
+  //   window.location.reload();
+  // };
 
   if (loading) {
     return (
@@ -39,7 +39,7 @@ export const RandomProfessional = () => {
       She works at a {randomProfessional.company_type} company of about {randomProfessional.company_size} employees, and she&apos;s a {randomProfessional.employment_status}.
           </p>
         </SingleProfessional>
-        <Button type="button" onClick={refreshPage}>randomize again!</Button>
+        {/* <Button type="button" onClick={refreshPage}>randomize again!</Button> */}
       </section>
     )
   } else {
@@ -54,7 +54,7 @@ export const RandomProfessional = () => {
       He work at a {randomProfessional.company_type} company of about {randomProfessional.company_size} employees, and he&apos;s a {randomProfessional.employment_status}.
           </p>
         </SingleProfessional>
-        <Button type="button" onClick={refreshPage}>get new professional</Button>
+        {/* <Button type="button" onClick={refreshPage}>get new professional</Button> */}
       </section>
     );
   }
