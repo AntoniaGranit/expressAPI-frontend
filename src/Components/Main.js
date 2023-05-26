@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { Select } from '@chakra-ui/react'
 import { NavigationLink, Button } from '../Styles/NavBarStyles';
 
 export const Main = () => {
@@ -17,39 +17,36 @@ export const Main = () => {
 
   return (
     <>
-      <FormControl>
-        <InputLabel id="demo-simple-select-label">Language</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={selectedLanguage}
-          label="language"
-          onChange={handleLanguageChange}>
-          <MenuItem value="">Order by work language:</MenuItem>
-          <MenuItem value="English">English</MenuItem>
-          <MenuItem value="German">German</MenuItem>
-          <MenuItem value="Spanish">Spanish</MenuItem>
-          <MenuItem value="Russian">Russian</MenuItem>
-          <MenuItem value="Polish">Polish</MenuItem>
-        </Select>
-      </FormControl>
+      <Select
+        placeholder="Select language"
+        bg="#FB563E"
+        borderColor="#FB563E"
+        value={selectedLanguage}
+        label="language"
+        onChange={handleLanguageChange}>
+        <option value="">Order by work language:</option>
+        <option value="English">English</option>
+        <option value="German">German</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Russian">Russian</option>
+        <option value="Polish">Polish</option>
+      </Select>
       <Link to={`/professionals/${selectedLanguage}`}>
         <Button type="button" disabled={!selectedLanguage}>sort by work language</Button>
       </Link>
 
-      <FormControl>
-        <InputLabel id="demo-simple-select-label">Gender</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={selectedGender}
-          label="gender"
-          onChange={handleGenderChange}>
-          <MenuItem value="">Order by gender:</MenuItem>
-          <MenuItem value="Female">Female</MenuItem>
-          <MenuItem value="Male">Male</MenuItem>
-        </Select>
-      </FormControl>
+      <Select
+        placeholder="Select gender"
+        bg="#FB563E"
+        color="white"
+        borderColor="#FB563E"
+        value={selectedGender}
+        label="gender"
+        onChange={handleGenderChange}>
+        <option value="">Order by gender:</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </Select>
       <Link to={`/${selectedGender}`}>
         <Button type="button" disabled={!selectedGender}>sort by gender</Button>
       </Link>
