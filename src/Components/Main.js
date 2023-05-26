@@ -23,7 +23,6 @@ export const Main = () => {
         value={selectedLanguage}
         label="language"
         onChange={handleLanguageChange}>
-        <option value="">order by work language:</option>
         <option value="english">english</option>
         <option value="german">german</option>
         <option value="spanish">spanish</option>
@@ -39,7 +38,6 @@ export const Main = () => {
         value={selectedGender}
         label="gender"
         onChange={handleGenderChange}>
-        <option value="">order by gender:</option>
         <option value="female">female</option>
         <option value="male">male</option>
       </Select>
