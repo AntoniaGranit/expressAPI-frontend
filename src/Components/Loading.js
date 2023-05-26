@@ -10,7 +10,6 @@ justify-content: center;`
 export const Loading = () => {
   return (
     <LoadingDiv>
-      {/* <LoadingH1>Loading...</LoadingH1> */}
       <img alt="Loading" src={LoadingLaptop} />
     </LoadingDiv>
   )
