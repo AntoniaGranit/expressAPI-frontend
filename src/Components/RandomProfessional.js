@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { User } from 'iconoir-react';
 import { Loading } from './Loading';
 import { SingleProfessional, UserIcon } from '../Styles/SingleProfessional';
-// import { Button } from '../Styles/NavBarStyles'
+import { Button } from '../Styles/NavBarStyles'
 
 export const RandomProfessional = () => {
   const [randomProfessional, setrandomProfessional] = useState({})
@@ -18,9 +18,9 @@ export const RandomProfessional = () => {
       .finally(() => setLoading(false))
   }, []);
 
-  // const refreshPage = () => {
-  //   window.location.reload();
-  // };
+  const refreshPage = () => {
+    window.location.reload();
+  };
 
   if (loading) {
     return (
@@ -41,7 +41,7 @@ export const RandomProfessional = () => {
       She works at a {randomProfessional.company_type.toLowerCase()} company of about {randomProfessional.company_size} employees.
           </p>
         </SingleProfessional>
-        {/* <Button type="button" onClick={refreshPage}>randomize again!</Button> */}
+        <Button type="button" onClick={refreshPage}>randomize again!</Button>
       </section>
     )
   } else if (randomProfessional.gender === 'Male') {
@@ -57,7 +57,7 @@ export const RandomProfessional = () => {
       He works at a {randomProfessional.company_type.toLowerCase()} company of about {randomProfessional.company_size} employees.
           </p>
         </SingleProfessional>
-        {/* <Button type="button" onClick={refreshPage}>get new professional</Button> */}
+        <Button type="button" onClick={refreshPage}>get new professional</Button>
       </section>
     );
   }
