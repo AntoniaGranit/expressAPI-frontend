@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Select = styled.select`
+appearance: none;
+padding-left: 6px;
 background-color: #FB563E;
 width: 50%;
 height: 45px;
