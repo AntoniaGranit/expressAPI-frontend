@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Select = styled.select`
 background-color: #FB563E;
 width: 50%;
-height: 40px;
+height: 45px;
 display: flex;
 justify-content: center;
 margin: auto;
@@ -14,7 +14,7 @@ font-family: "Questrial";
 font-weight: bold;
 font-size: 1em;
 cursor: pointer;
-margin-bottom: -15px;
+margin-bottom: -10px;
 
 @media (min-width: 1024px){
     width: 15%;
