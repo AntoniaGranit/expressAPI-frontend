@@ -22,7 +22,8 @@ export const RandomProfessional = () => {
     window.location.reload();
   };
 
-  if (loading) {
+  // if loading is true, OR if the randomProfessional-object is still empty, then show the Loading-component:
+  if (loading || Object.keys(randomProfessional).length === 0) {
     return (
       <Loading />
     )
@@ -44,21 +45,19 @@ export const RandomProfessional = () => {
     }
   }
 
-  console.log(randomProfessional.gender)
-
   return (
     <section>
       <SingleProfessional>
         <UserIcon><User width={50} height={50} /></UserIcon>
         <p>
         This randomized IT professional
-        is a {randomProfessional.age}-year-old {randomProfessional.gender} {randomProfessional.position} based
+        is a {randomProfessional.age}-year-old {randomProfessional.gender.toLowerCase()} {randomProfessional.position} based
         in {randomProfessional.city}. {pronoun()}&apos;s
-        a {randomProfessional.seniority_level}-level {randomProfessional.employment_status} with {randomProfessional.total_years_experience} years of experience,
+        a {randomProfessional.seniority_level.toLowerCase()}-level {randomProfessional.employment_status.toLowerCase()} with {randomProfessional.total_years_experience} years of experience,
         and a yearly salary of {randomProfessional.yearly_salary} euros. {possessivePronoun()} main
         programming language is {randomProfessional.main_language},
-        and {possessivePronoun()} work language is {randomProfessional.work_language}. {pronoun()} works
-        at a {randomProfessional.company_type} company of about {randomProfessional.company_size} employees.
+        and {possessivePronoun().toLowerCase()} work language is {randomProfessional.work_language}. {pronoun()} works
+        at a {randomProfessional.company_type.toLowerCase()} company of about {randomProfessional.company_size} employees.
         </p>
       </SingleProfessional>
       <Button type="button" onClick={refreshPage}>randomize again!</Button>
