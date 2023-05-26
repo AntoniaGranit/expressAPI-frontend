@@ -28,37 +28,40 @@ export const RandomProfessional = () => {
     )
   }
 
-  if (randomProfessional.gender === 'Female') {
-    return (
-      <section>
-        <SingleProfessional>
-          <UserIcon><User width={50} height={50} /></UserIcon>
-          <p>
-        This randomized IT professional is a {randomProfessional.age}-year-old {randomProfessional.gender.toLowerCase()} {randomProfessional.position} based in {randomProfessional.city}.
-      She&apos;s a {randomProfessional.seniority_level.toLowerCase()}-level {randomProfessional.employment_status.toLowerCase()} with {randomProfessional.total_years_experience} years of experience,
-      and a yearly salary of {randomProfessional.yearly_salary} euros.
-      Her main programming language is {randomProfessional.main_language}, and her work language is {randomProfessional.work_language}.
-      She works at a {randomProfessional.company_type.toLowerCase()} company of about {randomProfessional.company_size} employees.
-          </p>
-        </SingleProfessional>
-        <Button type="button" onClick={refreshPage}>randomize again!</Button>
-      </section>
-    )
-  } else if (randomProfessional.gender === 'Male') {
-    return (
-      <section>
-        <SingleProfessional>
-          <UserIcon><User width={50} height={50} /></UserIcon>
-          <p>
-        This randomized professional is a {randomProfessional.age}-year-old {randomProfessional.gender.toLowerCase()} {randomProfessional.position} based in {randomProfessional.city}.
-      He&apos;s a {randomProfessional.seniority_level.toLowerCase()}-level {randomProfessional.employment_status.toLowerCase()} with {randomProfessional.total_years_experience} years of experience,
-      and a yearly salary of {randomProfessional.yearly_salary} euros.
-      His main programming language is {randomProfessional.main_language}, and his work language is {randomProfessional.work_language}.
-      He works at a {randomProfessional.company_type.toLowerCase()} company of about {randomProfessional.company_size} employees.
-          </p>
-        </SingleProfessional>
-        <Button type="button" onClick={refreshPage}>randomize again!</Button>
-      </section>
-    );
+  const pronoun = () => {
+    if (randomProfessional.gender === 'Female') {
+      return 'She'
+    } else {
+      return 'He'
+    }
   }
+
+  const possessivePronoun = () => {
+    if (randomProfessional.gender === 'Female') {
+      return 'Her'
+    } else {
+      return 'His'
+    }
+  }
+
+  console.log(randomProfessional.gender)
+
+  return (
+    <section>
+      <SingleProfessional>
+        <UserIcon><User width={50} height={50} /></UserIcon>
+        <p>
+        This randomized IT professional
+        is a {randomProfessional.age}-year-old {randomProfessional.gender} {randomProfessional.position} based
+        in {randomProfessional.city}. {pronoun()}&apos;s
+        a {randomProfessional.seniority_level}-level {randomProfessional.employment_status} with {randomProfessional.total_years_experience} years of experience,
+        and a yearly salary of {randomProfessional.yearly_salary} euros. {possessivePronoun()} main
+        programming language is {randomProfessional.main_language},
+        and {possessivePronoun()} work language is {randomProfessional.work_language}. {pronoun()} works
+        at a {randomProfessional.company_type} company of about {randomProfessional.company_size} employees.
+        </p>
+      </SingleProfessional>
+      <Button type="button" onClick={refreshPage}>randomize again!</Button>
+    </section>
+  );
 }
