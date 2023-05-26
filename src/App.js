@@ -23,9 +23,9 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/professionals/:worklanguage" element={<WorkLanguage />} />
-          <Route path="/randomname" element={<CompleteList />} />
+          <Route path="/completelist" element={<CompleteList />} />
           <Route path="/:gender" element={<GenderList />} />
-          <Route path="/randomnametwo" element={<RandomProfessional />} />
+          <Route path="/randomprofessional" element={<RandomProfessional />} />
         </Routes>
       </MainSection>
     </BrowserRouter>
