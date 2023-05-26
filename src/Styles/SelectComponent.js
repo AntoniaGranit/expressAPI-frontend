@@ -15,6 +15,7 @@ font-weight: bold;
 font-size: 1em;
 cursor: pointer;
 margin-bottom: -10px;
+outline: none;
 
 @media (min-width: 1024px){
     width: 15%;
