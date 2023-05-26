@@ -4,8 +4,8 @@ import { Link, NavLink } from 'react-router-dom';
 export const NavBar = styled.header`
 background-color: #1C0825;
 margin: auto;
-height: 70px;
-width: 80%;
+height: 80px;
+width: 100%;
 position: sticky;
 display: flex;
 flex-direction: row;
@@ -17,7 +17,8 @@ export const H1 = styled.h1`
 color: #FB563E;
 font-family: "Questrial";
 font-size: 20px;
-margin-top: 40px;
+margin-top: 20px;
+margin-left: 30px;
 font-weight: bold;
 display: flex;
 align-items: center;
@@ -35,7 +36,8 @@ text-decoration: none;
 display: flex;
 justify-content: flex-start;
 border: none;
-margin-top: 40px;
+margin-top: 20px;
+margin-right: 30px;
 align-items: center;
 
 &:hover {
