@@ -1,19 +1,34 @@
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { User } from 'iconoir-react';
-import { Loading } from './Loading';
 import { SingleProfessional, UserIcon } from '../Styles/SingleProfessional';
 import { Button } from '../Styles/NavBarStyles'
+import { Data, Professional } from '../types'
 
 export const RandomProfessional = () => {
-  const [randomProfessional, setrandomProfessional] = useState({})
-  const [loading, setLoading] = useState(false);
+  const [randomProfessional, setrandomProfessional] = useState<Professional>({
+    id: 0,
+    age: 0,
+    gender: '',
+    city: '',
+    position: '',
+    total_years_experience: 0,
+    seniority_level: '',
+    main_language: '',
+    yearly_salary: 0,
+    employment_status: '',
+    contract_duration: '',
+    work_language: '',
+    company_size: '',
+    company_type: ''
+  });
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setLoading(true)
     fetch('https://project-express-api-wcsanbxhyq-lz.a.run.app/random-professional')
       .then((res) => res.json())
-      .then((data) => setrandomProfessional(data.body.professional))
+      .then((data: Data) => setrandomProfessional(data.body.professional))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
   }, []);
@@ -25,7 +40,7 @@ export const RandomProfessional = () => {
   // if loading is true, OR if the randomProfessional-object is still empty, then show the Loading-component:
   if (loading || Object.keys(randomProfessional).length === 0) {
     return (
-      <Loading />
+      <div><p>Loading</p></div>
     )
   }
 
@@ -35,7 +50,7 @@ export const RandomProfessional = () => {
     } else {
       return 'He'
     }
-  }
+  };
 
   const possessivePronoun = () => {
     if (randomProfessional.gender === 'Female') {
@@ -43,7 +58,7 @@ export const RandomProfessional = () => {
     } else {
       return 'His'
     }
-  }
+  };
 
   return (
     <section>

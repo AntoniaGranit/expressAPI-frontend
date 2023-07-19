@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loading } from './Loading';
 
+
 export const HighesttoLowest = () => {
   const [completeList, setCompleteList] = useState([])
   const [loading, setLoading] = useState(false);
