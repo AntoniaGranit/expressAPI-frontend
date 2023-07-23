@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Loading } from './Loading';
 import { Professional, ProfessionalList } from '../types';
 
-
 export const HighesttoLowest = () => {
   const [completeList, setCompleteList] = useState<Professional[]>([])
   const [loading, setLoading] = useState<boolean>(false);

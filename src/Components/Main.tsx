@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { NavigationLink, Button } from '../Styles/NavBarStyles';
 import { Select } from '../Styles/SelectComponent';
 import { MainSection } from '../Styles/Sections';
 
-export const Main = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('english');
-  const [selectedGender, setSelectedGender] = useState('female');
-  const handleLanguageChange = (event) => {
+export const Main: React.FC = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState<string>('english');
+  const [selectedGender, setSelectedGender] = useState<string>('female');
+  const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
     console.log(event.target.value);
     setSelectedLanguage(event.target.value);
   }
-  const handleGenderChange = (event) => {
+  const handleGenderChange = (event: ChangeEvent<HTMLSelectElement>) => {
     console.log(event.target.value);
     setSelectedGender(event.target.value);
   }
@@ -21,7 +21,6 @@ export const Main = () => {
       <Select
         placeholder="select language"
         value={selectedLanguage}
-        label="language"
         onChange={handleLanguageChange}>
         <option value="english">english</option>
         <option value="german">german</option>
@@ -36,7 +35,6 @@ export const Main = () => {
       <Select
         placeholder="select gender"
         value={selectedGender}
-        label="gender"
         onChange={handleGenderChange}>
         <option value="female">female</option>
         <option value="male">male</option>
