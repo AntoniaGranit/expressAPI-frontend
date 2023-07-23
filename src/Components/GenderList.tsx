@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loading } from './Loading';
 import { SingleProfessional, CategoryP } from '../Styles/SingleProfessional';
+import { Professional, ProfessionalList } from '../types';
 
 export const GenderList = () => {
-  const [genderList, setGenderList] = useState([])
-  const [loading, setLoading] = useState(false);
+  const [genderList, setGenderList] = useState<Professional[]>([])
+  const [loading, setLoading] = useState<boolean>(false);
   const { gender } = useParams();
 
   useEffect(() => {
     setLoading(true)
     fetch(`https://project-express-api-wcsanbxhyq-lz.a.run.app/professionals/${gender}`)
       .then((res) => res.json())
-      .then((data) => setGenderList(data.body.professionals))
+      .then((data: ProfessionalList) => setGenderList(data.body.professionals))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
   }, [gender]);

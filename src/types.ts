@@ -1,7 +1,3 @@
-export interface Data {
-    body: {professional: Professional}
-}
-
 export interface Professional {
     id: number,
     age: number,
@@ -17,4 +13,16 @@ export interface Professional {
     work_language: string,
     company_size: string,
     company_type: string
+}
+
+export interface Data {
+    body: {
+        professional: Professional;
+    }
+}
+
+export interface ProfessionalList {
+    body: {
+        professionals: Professional[];
+    }
 }

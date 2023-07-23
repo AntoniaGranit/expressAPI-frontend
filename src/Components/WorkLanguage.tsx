@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loading } from './Loading';
 import { SingleProfessional, CategoryP } from '../Styles/SingleProfessional';
+import { Professional, ProfessionalList } from '../types';
 
 export const WorkLanguage = () => {
-  const [languageList, setLanguageList] = useState([])
-  const [loading, setLoading] = useState(false);
+  const [languageList, setLanguageList] = useState<Professional[]>([])
+  const [loading, setLoading] = useState<boolean>(false);
   const { worklanguage } = useParams();
 
   useEffect(() => {
     setLoading(true)
     fetch(`https://project-express-api-wcsanbxhyq-lz.a.run.app/professionals?worklanguage=${worklanguage}`)
       .then((res) => res.json())
-      .then((data) => setLanguageList(data))
+      .then((data: ProfessionalList) => setLanguageList(data.body.professionals))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
   }, [worklanguage]);

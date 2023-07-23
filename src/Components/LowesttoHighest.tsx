@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Loading } from './Loading';
+import { Professional, ProfessionalList } from '../types'
 
 export const LowesttoHighest = () => {
-  const [completeList, setCompleteList] = useState([])
-  const [loading, setLoading] = useState(false);
+  const [completeList, setCompleteList] = useState<Professional[]>([])
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setLoading(true)
     fetch('https://project-express-api-wcsanbxhyq-lz.a.run.app/lowesttohighest')
       .then((res) => res.json())
-      .then((data) => setCompleteList(data.body.professionals))
+      .then((data: ProfessionalList) => setCompleteList(data.body.professionals))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
   }, []);
@@ -34,7 +35,7 @@ export const LowesttoHighest = () => {
             <p>Main programming languge: {singleProfessional.main_language}</p>
             <p>Yearly salary: {singleProfessional.yearly_salary}</p>
             <p>Employment status: {singleProfessional.employment_status}</p>
-            <p>Contract duration: {singleProfessional.contract_duraction}</p>
+            <p>Contract duration: {singleProfessional.contract_duration}</p>
             <p>Work language: {singleProfessional.work_language}</p>
             <p>Company size: {singleProfessional.company_size}</p>
             <p>Company type: {singleProfessional.company_type}</p>

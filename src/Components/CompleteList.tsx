@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Loading } from './Loading';
 import { SingleProfessional, CategoryP } from '../Styles/SingleProfessional';
+import { Professional, ProfessionalList } from '../types';
 
 export const CompleteList = () => {
-  const [completeList, setCompleteList] = useState([])
-  const [loading, setLoading] = useState(false);
+  const [completeList, setCompleteList] = useState<Professional[]>([])
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setLoading(true)
     fetch('https://project-express-api-wcsanbxhyq-lz.a.run.app/professionals/')
       .then((res) => res.json())
-      .then((data) => setCompleteList(data))
+      .then((data: ProfessionalList) => setCompleteList(data.body.professionals))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
   }, []);

@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { User } from 'iconoir-react';
 import { SingleProfessional, UserIcon } from '../Styles/SingleProfessional';
 import { Button } from '../Styles/NavBarStyles'
-import { Data, Professional } from '../types'
+import { Loading } from './Loading'
+import { Professional } from '../types'
 
 export const RandomProfessional = () => {
   const [randomProfessional, setrandomProfessional] = useState<Professional>({
@@ -28,7 +29,7 @@ export const RandomProfessional = () => {
     setLoading(true)
     fetch('https://project-express-api-wcsanbxhyq-lz.a.run.app/random-professional')
       .then((res) => res.json())
-      .then((data: Data) => setrandomProfessional(data.body.professional))
+      .then((data) => setrandomProfessional(data.body.professional))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
   }, []);
@@ -40,7 +41,7 @@ export const RandomProfessional = () => {
   // if loading is true, OR if the randomProfessional-object is still empty, then show the Loading-component:
   if (loading || Object.keys(randomProfessional).length === 0) {
     return (
-      <div><p>Loading</p></div>
+      <Loading />
     )
   }
 
