@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link, NavLink } from 'react-router-dom';
 
 export const NavBar = styled.header`
-background-color: #1C0825;
+background-color: transparent;
 margin: auto;
 height: 80px;
 width: 100%;
