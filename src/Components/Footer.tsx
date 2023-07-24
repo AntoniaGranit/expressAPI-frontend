@@ -9,6 +9,13 @@ const FooterWrapper = styled.footer`
   right: 0;
   width: 100%;
   justify-content: flex-end;
+  align-items: center;
+  background-color: #1C0825;
+  height: 50px;
+
+  @media (min-width: 1024px){
+    background-color: transparent;
+}
 `
 
 const FooterP = styled.p`
@@ -19,7 +26,6 @@ font-size: 18px;
 line-height: 30px;
 text-decoration: none;
 padding-right: 30px;
-padding-bottom: 10px;
 `
 
 const FooterLink = styled.a`

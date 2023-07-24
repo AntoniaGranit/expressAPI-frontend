@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link, NavLink } from 'react-router-dom';
 
 export const NavBar = styled.header`
-background-color: transparent;
 margin: auto;
 height: 80px;
 width: 100%;
@@ -11,7 +10,12 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 top: 0;
-z-index: 1;`
+z-index: 1;
+background-color: #1C0825;
+
+  @media (min-width: 1024px){
+    background-color: transparent;
+}`
 
 export const H1 = styled.h1`
 color: #FB563E;
