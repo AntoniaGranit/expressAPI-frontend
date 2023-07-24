@@ -18,7 +18,7 @@ font-weight: bold;
 font-size: 18px;
 line-height: 30px;
 text-decoration: none;
-padding-right: 25px;
+padding-right: 30px;
 padding-bottom: 10px;
 `
 
@@ -29,7 +29,7 @@ font-weight: bold;
 font-size: 18px;
 line-height: 30px;
 text-decoration: none;
-padding-right: 25px;
+padding-right: 15px;
 padding-bottom: 10px;
 transition: 0.2s ease-in-out;
 
