@@ -6,6 +6,7 @@ import { CompleteList } from 'Components/CompleteList';
 import { GenderList } from 'Components/GenderList';
 import { RandomProfessional } from 'Components/RandomProfessional';
 import { Main } from 'Components/Main';
+import { Footer } from 'Components/Footer';
 import styled from 'styled-components';
 
 const MainSection = styled.section`
@@ -27,6 +28,7 @@ export const App = () => {
           <Route path="/:gender" element={<GenderList />} />
           <Route path="/randomprofessional" element={<RandomProfessional />} />
         </Routes>
+        <Footer />
       </MainSection>
     </BrowserRouter>
   )
