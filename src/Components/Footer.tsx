@@ -20,10 +20,18 @@ line-height: 30px;
 text-decoration: none;
 padding-right: 25px;
 padding-bottom: 10px;
+`
 
-&a {
-    color: #FB563E;  
-}
+const FooterLink = styled.a`
+color: #FB563E;
+font-family: "Questrial";
+font-weight: bold;
+font-size: 18px;
+line-height: 30px;
+text-decoration: none;
+padding-right: 25px;
+padding-bottom: 10px;
+transition: 0.2s ease-in-out;
 
 &:active {
     color: #FB563E;
@@ -32,12 +40,16 @@ padding-bottom: 10px;
 &:visited {
     color: #FB563E;
 }
+
+&:hover {
+    opacity: 0.3;
+}
 `
 
 export const Footer: React.FC = () => {
   return (
     <FooterWrapper>
-      <FooterP>created by <a href="https://antoniagranit.netlify.app" target="_blank" rel="noreferrer">antonia granit</a></FooterP>
+      <FooterP>created by <FooterLink href="https://antoniagranit.netlify.app" target="_blank" rel="noreferrer">antonia granit</FooterLink></FooterP>
     </FooterWrapper>
   )
 };

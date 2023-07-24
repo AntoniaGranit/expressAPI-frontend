@@ -39,6 +39,7 @@ border: none;
 margin-top: 20px;
 margin-right: 30px;
 align-items: center;
+transition: 0.2s ease-in-out;
 
 &:hover {
     opacity: 0.3;
@@ -55,6 +56,7 @@ text-decoration: none;
 display: flex;
 width: fit-content;
 margin: auto;
+transition: 0.2s ease-in-out;
 
 &:hover {
     opacity: 0.3;
@@ -71,6 +73,7 @@ border: none;
 display: flex;
 margin: auto;
 cursor: pointer;
+transition: 0.2s ease-in-out;
 
 &:hover {
     opacity: 0.3;
