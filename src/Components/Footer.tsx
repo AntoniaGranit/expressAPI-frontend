@@ -37,7 +37,24 @@ line-height: 30px;
 text-decoration: none;
 padding-right: 15px;
 padding-bottom: 10px;
-transition: 0.2s ease-in-out;
+display: inline-block;
+
+:after {
+  background: none repeat scroll transparent;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: #FB563E;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
 
 &:active {
     color: #FB563E;
@@ -47,9 +64,6 @@ transition: 0.2s ease-in-out;
     color: #FB563E;
 }
 
-&:hover {
-    opacity: 0.3;
-}
 `
 
 export const Footer: React.FC = () => {

@@ -37,16 +37,30 @@ font-family: "Questrial";
 font-weight: bold;
 font-size: 20px;
 text-decoration: none;
-display: flex;
 justify-content: flex-start;
 border: none;
 margin-top: 20px;
 margin-right: 30px;
 align-items: center;
-transition: 0.2s ease-in-out;
+display: inline-block;
+padding: 15px 20px;
 
-&:hover {
-    opacity: 0.3;
+:after {    
+  margin-top: 4px;
+  background: none repeat scroll transparent;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: #FB563E;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 `
 
@@ -60,10 +74,24 @@ text-decoration: none;
 display: flex;
 width: fit-content;
 margin: auto;
-transition: 0.2s ease-in-out;
+display: block;
 
-&:hover {
-    opacity: 0.3;
+:after {    
+  margin-top: 4px;
+  background: none repeat scroll transparent;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: #FB563E;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 `
 
@@ -77,9 +105,23 @@ border: none;
 display: flex;
 margin: auto;
 cursor: pointer;
-transition: 0.2s ease-in-out;
+display: block;
 
-&:hover {
-    opacity: 0.3;
+:after {    
+  margin-top: 4px;
+  background: none repeat scroll transparent;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: #FB563E;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 `
